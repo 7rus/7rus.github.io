@@ -118,8 +118,8 @@
                  v-bind:style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }">
                 <div class="slide-inner">
                   <div class="slide-bg-text">
-                        <p>{{ slide.headlineFirstLine }}</p>
-                        <p>{{ slide.headlineSecondLine }}</p>
+                        <p class="text-line">{{ slide.headlineFirstLine }}</p>
+                        <p class="text-line">{{ slide.headlineSecondLine }}</p>
                     </div>
                     <div class="slide-rect-filter">
                         <div class="slide-rect" v-bind:style="{'border-image-source': 'url(' + slide.rectImg + ')'}"></div>
@@ -129,7 +129,7 @@
                   <h2 class="slide-side-text"><span>{{ slide.sublineFirstLine }} / </span><span>{{ slide.sublineSecondLine }}</span></h2><a class="slide-content-cta">Call To Action</a></div>
             </div>
         <div class="controls-container">
-            <button class="controls-button text-white" 
+            <button class="controls-button" 
                     v-for="(slide, index) in slides"
                     v-bind:class="{ active: index === currentSlide }"
                     v-on:click="updateSlide(index)">{{ slide.button }}</button>
@@ -140,11 +140,40 @@
                   v-bind:class="{ active: index === currentSlide }"
                   v-on:click="updateSlide(index)"></span>
         </div>
+		
     </div>
+	<svg class="editorial"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 24 150 28 "
+     preserveAspectRatio="none">
+ <defs>
+ <path id="gentle-wave"
+ d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+  </defs>
+  <g class="parallax1">
+   <use xlink:href="#gentle-wave" x="50" y="3" fill="#aa66cccc"/>
+  </g>
+    <g class="parallax2">
+   <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2b0"/>
+    </g>
+      <g class="parallax3">
+   <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
+   </g>
+    <g class="parallax4">
+   <use xlink:href="#gentle-wave" x="50" y="6" fill="#eee"/>  
+  </g>
+</svg>
   <!-- Main layout -->
   <main>
   
   
+
 
 	
 	
@@ -508,10 +537,11 @@
   <script type="text/javascript" src="ass/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="ass/js/mdb.min.js"></script>
-  <script src="ass/js/menu.js"></script>
+  <script src="ass/js/cook.js"></script>
         <script src="ass/js/vue.min.js"></script>
         <script src="ass/js/slider.js"></script>
 	 <script src="ass/js/tpl_navbar.js"></script>
+	  <script src="ass/js/link.js"></script>
 	 
   <script>
   

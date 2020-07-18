@@ -555,6 +555,7 @@ body ::-moz-selection {
 .slide-wrapper.active {
   transition-delay: 0s;
   opacity: 1;
+  height: 98%;
 }
 .slide-wrapper.active .slide-content-text > p {
 	text-shadow: 3px 3px 4px #fcecbc;
