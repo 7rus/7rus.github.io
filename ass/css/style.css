@@ -1,4 +1,7 @@
 /* Your custom styles */
+.text_calif {
+  font-family: 'Comfortaa';
+}
 .md-pills li {
     padding: .3rem !important;
     font-size: 1.2em;
@@ -16,7 +19,7 @@
 }}
 .navbar-nav {
 	margin-right:25px;
-	margin-left:25px!important;
+	padding-left:25px!important;
 }
 .editorial {
   display: block;
