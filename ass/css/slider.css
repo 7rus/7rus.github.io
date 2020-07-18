@@ -31,15 +31,16 @@ body ::-moz-selection {
   color: #f5f5f1;
 }
 .wrapper {
-	height: calc(100vh - 45px);
-	min-height: 36rem;
+	height: calc(100vh - 40px);
+	/*min-height: 36rem;*/
+	min-height: 20rem;
 	position: relative;
 	padding-top: 45px;
 }
 @media (min-width: 1000px) {
   .wrapper {
    /* height: 100vh;*/
-	  height: calc(100vh - 90px);
+	  height: calc(100vh - 45px);
     min-height: 0;
   }
 }
