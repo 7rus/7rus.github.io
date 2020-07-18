@@ -17,7 +17,8 @@ var app = new Vue({
 				button: "Мебель для дома"
             },
             {
-                headlineFirstLine: "Мебель",
+                headlineFirstLine: "Практичная мебель",
+                headlineFirstLineBig: "Мебель",
                 headlineSecondLine: "для офиса",
                 sublineFirstLine: "Креативно",
                 sublineSecondLine: "Удобно",
@@ -26,7 +27,8 @@ var app = new Vue({
 				button: "Для офиса"
             },
             {
-                headlineFirstLine: "Мебель",
+                headlineFirstLine: "Долговечная мебель",
+                headlineFirstLineBig: "Мебель",
                 headlineSecondLine: "для террас",
                 sublineFirstLine: "Практично",
                 sublineSecondLine: "Долговечно",
