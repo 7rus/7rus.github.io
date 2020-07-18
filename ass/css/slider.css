@@ -116,7 +116,8 @@ body ::-moz-selection {
 	padding-top: auto;
 }
 .slide-content {
-  color: #fff;
+  color: #08090a;
+  
   margin-top: 1rem;
   position: absolute;
   top: 50%;
@@ -172,8 +173,8 @@ body ::-moz-selection {
 @media (max-width: 630px) {
   .slide-content-text {
     margin-bottom: 5.5rem;
-	margin-left: calc(9vw - (.7) * 47vw);
-	  font-size: 3.5rem;
+	margin-left: calc(9vw - (.7) * 27vw);
+	  font-size: 3.3rem;
 };
   }
 }
@@ -183,7 +184,7 @@ body ::-moz-selection {
   }
 }
 .slide-content-text > p:last-child {
-  padding-left: 3rem;
+  padding-left: 0rem;
 }
 .slide-content-cta {
   cursor: pointer;
@@ -555,6 +556,7 @@ body ::-moz-selection {
   opacity: 1;
 }
 .slide-wrapper.active .slide-content-text > p {
+	text-shadow: 3px 3px 4px #fcecbc;
   opacity: 0;
   animation-delay: 0.8s;
   animation-name: cutTextDown;
@@ -601,6 +603,7 @@ body ::-moz-selection {
   animation-timing-function: ease-in;
 }
 .first-load .slide-wrapper.active .slide-content-text > p {
+	text-shadow: 3px 3px 4px #fcecbc;
   animation-name: fadeIn;
   animation-delay: 0.5s;
   animation-duration: 0.7s;

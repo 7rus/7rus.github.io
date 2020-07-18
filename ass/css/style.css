@@ -1,1 +1,8 @@
 /* Your custom styles */
+.md-pills li {
+    padding: .3rem !important;
+}
+@media (max-width: 480px) { 
+.md-pills li {
+    padding: 0 !important;
+}}
