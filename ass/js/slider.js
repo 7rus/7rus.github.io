@@ -7,8 +7,9 @@ var app = new Vue({
         isFirstLoad: true,
         slides: [
             {
-                headlineFirstLine: "Мебель",
-                headlineSecondLine: "под заказ",
+                headlineFirstLine: "Изготовление мебели",
+                headlineFirstLineBig: "Мебель",
+                headlineSecondLine: "на заказ",
                 sublineFirstLine: "Качественно",
                 sublineSecondLine: "Быстро",
                 bgImg: "ass/pic/slide-1.jpg",
