@@ -229,10 +229,10 @@ body ::-moz-selection {
 @media (max-height: 790px) {
   .slide-rect {
 	left: 9vw;
-	height: 20vw;
-	width: 16vw;
 	border-width: 5vh;
-	top: 0px;
+	/*top: 0px;
+	height: 20vw;
+	width: 16vw;*/
   }
 }
 @media (max-height: 730px) {
@@ -298,6 +298,7 @@ body ::-moz-selection {
   min-width: 15rem;
   transition: 0.25s ease-in-out;
   outline: 0;
+  color:white !important;
 }
 @media (max-width: 730px) {
   .controls-button {

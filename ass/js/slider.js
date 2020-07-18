@@ -27,8 +27,8 @@ var app = new Vue({
             {
                 headlineFirstLine: "Мебель",
                 headlineSecondLine: "для террас",
-                sublineFirstLine: "Практичнось",
-                sublineSecondLine: "Долговечность",
+                sublineFirstLine: "Практично",
+                sublineSecondLine: "Долговечно",
                 bgImg: "ass/pic/slide-3.jpg",
                 rectImg: "ass/pic/slide-3.jpg",
 				button: "Для улицы"

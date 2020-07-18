@@ -94,7 +94,7 @@
   <div class="d-flex change-mode">
 
         <div class="change-mode-wrapper">
-          <button class="" id="dark-mode">
+          <button class="" id="dark-mode")>
 		  <i class="fas fa-adjust"></i> 
 		  
 		  </button>
@@ -129,7 +129,7 @@
                   <h2 class="slide-side-text"><span>{{ slide.sublineFirstLine }} / </span><span>{{ slide.sublineSecondLine }}</span></h2><a class="slide-content-cta">Call To Action</a></div>
             </div>
         <div class="controls-container">
-            <button class="controls-button" 
+            <button class="controls-button text-white" 
                     v-for="(slide, index) in slides"
                     v-bind:class="{ active: index === currentSlide }"
                     v-on:click="updateSlide(index)">{{ slide.button }}</button>
@@ -500,6 +500,8 @@
 
   <!-- JQuery -->
   <script src="ass/js/jquery-3.4.1.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="ass/js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
@@ -726,33 +728,7 @@
     })
 
   </script>
-  <!-- JVectorMap -->
-  <link rel="stylesheet" href="../../js/vendor/jvectormap/jquery-jvectormap-2.0.3.css" type="text/css" media="screen" />
-  <script src="../../js/vendor/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
-  <script src="../../js/vendor/jvectormap/jquery-jvectormap-world-mill.js"></script>
-  <script>
-    $(function () {
-
-      colors = {};
-
-      colors['ca'] = '#A4D886';
-      colors['ru'] = '#FCECA2';
-      colors['cn'] = '#F9573B';
-      colors['us'] = '#87CEEB';
-      colors['jp'] = '#34BD0E';
-      colors['au'] = '#BCC7FC';
-      colors['kz'] = '#D4624E';
-      colors['de'] = '#34BD0E';
-
-      $('#world-map').vectorMap({
-        colors: colors,
-        hoverOpacity: 0.7, // opacity for :hover
-        hoverColor: false
-      });
-
-    });
-
-  </script>
+  
   <!-- /.JVectorMap -->
 </body>
 
