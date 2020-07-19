@@ -12,3 +12,10 @@ $(document).ready(function() {
    	 $('a.navwork').addClass("active");
    }, 0);
 });
+$(document).ready(function() {
+   $('#text-container').load('https://7rus.github.io/ass/tpl/text.html');
+   setTimeout(function(){
+   	 $('a.navresume').addClass("active");
+   	 $('a.navwork').addClass("active");
+   }, 0);
+});
