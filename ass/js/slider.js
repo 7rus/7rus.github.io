@@ -2,6 +2,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        cart_1: "Офисная мебель",
         currentSlide: 0,
         isPreviousSlide: false,
         isFirstLoad: true,

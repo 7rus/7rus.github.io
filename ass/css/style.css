@@ -1,9 +1,12 @@
 /* Your custom styles */
+.fixed-sn .double-nav, .fixed-sn footer, .fixed-sn main {
+     padding-left: 0;
+}
 .text_calif {
   font-family: 'Comfortaa';
 }
 .md-pills li {
-    padding: .3rem !important;
+    padding: .3rem!important;
     font-size: 1.2em;
     font-family: 'Comfortaa';
 }
@@ -15,7 +18,7 @@
 }
 @media (max-width: 480px) {
 .md-pills li {
-    padding: 0 !important;
+    padding: 0!important;
 }}
 .navbar-nav {
 	margin-right:25px;
@@ -30,7 +33,7 @@
   z-index:5;
   bottom:-5px;
   position:absolute;
-  left:0px;
+  left:0;
   float:left;
 }
 

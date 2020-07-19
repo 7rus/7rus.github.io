@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>7rus
-</title>
+  </title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -26,171 +26,207 @@
 
   <!-- Main Navigation -->
   <header>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg scrolling-navbar navbar-light fixed-top">
-
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-  <!-- Breadcrumb -->
-      <div class="breadcrumb-dn mr-auto">
-        <p>7rus</p>
-      </div>
-
-
-
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarRightAlignExample"
-      aria-controls="navbarRightAlignExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarRightAlignExample">
-      <!-- Left links -->
-      <ul class="navbar-nav ml-auto mb-2 mb-lg-0 md-pills pills-secondary ">
-        <li class="nav-item example hoverable">
-          <a class="nav-link active waves-effect" aria-current="page" href="#">Главная</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-effect" href="#">Портфолио</a>
-        </li>
-        <!-- Navbar dropdown -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Услуги
-          </a>
-          <!-- Dropdown menu -->
-          <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item waves-effect" href="#">Action</a></li>
-            <li><a class="dropdown-item waves-effect" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a class="dropdown-item waves-effect" href="#">Something else here</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link waves-effect" href="#">Контакты</a>
-        </li>
-      </ul>
-      <!-- Left links -->
-    </div>
-  <div class="d-flex change-mode">
-
-        <div class="change-mode-wrapper">
-          <button class="" id="dark-mode")>
-		  <i class="fas fa-adjust"></i>
-
-		  </button>
-		</div>
-</div>  <!-- Collapsible wrapper -->
-  </div>
-  <!-- Container wrapper -->
-
-      </div>
-
-    </nav>    <!-- Navbar -->
+<div id="nav-container"></div>
+  
 
   </header>
   <!-- Main Navigation -->
 
 
-<div id="app" class="wrapper" v-cloak v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
-            <div class="slide-wrapper"
-                 v-for="(slide, index) in slides"
-                 v-bind:class="{ active: index === currentSlide }"
-                 v-bind:style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }">
-                <div class="slide-inner">
-                  <div class="slide-bg-text">
-                        <p class="text-line">{{ slide.headlineFirstLineBig }}</p>
-                        <p class="text-line">{{ slide.headlineSecondLine }}</p>
-                    </div>
-                    <div class="slide-rect-filter">
-                        <div class="slide-rect" v-bind:style="{'border-image-source': 'url(' + slide.rectImg + ')'}"></div>
-                    </div>
-                    <div class="slide-content">
-                        <h1 class="slide-content-text"><p>{{ slide.headlineFirstLine }}</p><p>{{ slide.headlineSecondLine }}</p></h1></div>
-                  <h2 class="slide-side-text text_calif"><span>{{ slide.sublineFirstLine }} / </span><span>{{ slide.sublineSecondLine }}</span></h2><a class="slide-content-cta">Call To Action</a></div>
-            </div>
-        <div class="controls-container">
-            <button class="controls-button text_calif"
-                    v-for="(slide, index) in slides"
-                    v-bind:class="{ active: index === currentSlide }"
-                    v-on:click="updateSlide(index)">{{ slide.button }}</button>
+  <div id="app" class="wrapper" v-cloak v-bind:class="{'is-previous': isPreviousSlide, 'first-load': isFirstLoad}">
+    <div class="slide-wrapper" v-for="(slide, index) in slides" v-bind:class="{ active: index === currentSlide }" v-bind:style="{ 'z-index': (slides.length - index), 'background-image': 'url(' + slide.bgImg + ')' }">
+      <div class="slide-inner">
+        <div class="slide-bg-text">
+          <p class="text-line">{{ slide.headlineFirstLineBig }}</p>
+          <p class="text-line">{{ slide.headlineSecondLine }}</p>
         </div>
-        <div class="pagination-container">
-            <span class="pagination-item"
-                  v-for="(slide, index) in slides"
-                  v-bind:class="{ active: index === currentSlide }"
-                  v-on:click="updateSlide(index)"></span>
+        <div class="slide-rect-filter">
+          <div class="slide-rect" v-bind:style="{'border-image-source': 'url(' + slide.rectImg + ')'}"></div>
         </div>
-
+        <div class="slide-content">
+          <h1 class="slide-content-text">
+            <p>{{ slide.headlineFirstLine }}</p>
+            <p>{{ slide.headlineSecondLine }}</p>
+          </h1>
+        </div>
+        <h2 class="slide-side-text text_calif"><span>{{ slide.sublineFirstLine }} / </span><span>{{ slide.sublineSecondLine }}</span></h2><a class="slide-content-cta">Call To Action</a>
+      </div>
     </div>
+    <div class="controls-container">
+      <button class="controls-button text_calif" v-for="(slide, index) in slides" v-bind:class="{ active: index === currentSlide }" v-on:click="updateSlide(index)">{{ slide.button }}</button>
+    </div>
+    <div class="pagination-container">
+      <span class="pagination-item" v-for="(slide, index) in slides" v-bind:class="{ active: index === currentSlide }" v-on:click="updateSlide(index)"></span>
+    </div>
+
+  </div>
 
   <!-- Main layout -->
   <main>
 
-    <svg class="editorial"
-       xmlns="http://www.w3.org/2000/svg"
-       xmlns:xlink="http://www.w3.org/1999/xlink"
-       viewBox="0 24 150 28 "
-       preserveAspectRatio="none">
-   <defs>
-   <path id="gentle-wave"
-   d="M-160 44c30 0
+    <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0
       58-18 88-18s
       58 18 88 18
       58-18 88-18
       58 18 88 18
       v44h-352z" />
-    </defs>
-    <g class="parallax1">
-     <use xlink:href="#gentle-wave" x="50" y="3" fill="#aa66cccc"/>
-    </g>
-      <g class="parallax2">
-     <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2b0"/>
+      </defs>
+      <g class="parallax1">
+        <use xlink:href="#gentle-wave" x="50" y="3" fill="#aa66cccc" />
       </g>
-        <g class="parallax3">
-     <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
-     </g>
+      <g class="parallax2">
+        <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2b0" />
+      </g>
+      <g class="parallax3">
+        <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1" />
+      </g>
       <g class="parallax4">
-     <use xlink:href="#gentle-wave" x="50" y="6" fill="#eee"/>
-    </g>
-  </svg>
+        <use xlink:href="#gentle-wave" x="50" y="6" fill="#eee" />
+      </g>
+    </svg>
 
 
 
 
+<section class="mb-5">
 
 
     <div class="container-fluid">
 
       <!-- Section heading -->
       <div class="mt-lg-5 mb-5">
-
         <h2 class="text-center text_calif font-weight-bold">Mебель и интерьеры из дерева на заказ</h4>
-
-        <p class="text-center text_calif dark-grey-text mt-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-
-        <hr>
-
+          <p class="text-center text_calif dark-grey-text mt-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <hr>
       </div>
 
+      <!-- Section: Cascading panels -->
+      <section class="mb-5">
+<div id="app">
+
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-lg-3 col-md-12 mb-4">
+
+            <!-- Card -->
+            <div class="card card-cascade narrower hoverable">
+
+              <!-- Card image -->
+              <div class="view view-cascade overlay-card-header hm-white-slight">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2813%29.jpg" class="img-fluid">
+                <a href="#!">
+                  <div class="mask waves-effect waves-light"></div>
+              </div>
+              <!-- Card image -->
+
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center">
+
+                <div class="list-group list-panel">
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Cras justo odio <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus ac
+                    facilisi<i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Morbi leo risus <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Porta ac consectet<i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum at eros
+                    <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+                </div>
+              </div>
+              <!-- Card content -->
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-12 mb-4">
+
+            <!-- Card -->
+            <div class="card card-cascade narrower hoverable">
+
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header blue-gradient">
+                <canvas id="traffic" height="155px"></canvas>
+              </div>
+              <!-- Card image -->
+
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center">
+
+                <div class="list-group list-panel">
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Cras justo odio <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus ac
+                    facilisi<i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Morbi leo risus <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Porta ac consectet<i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum at eros
+                    <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+                </div>
+              </div>
+              <!-- Card content -->
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-12 mb-4">
+
+            <!-- Card -->
+            <div class="card card-cascade narrower hoverable">
+
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header purple-gradient">
+                <canvas id="conversion" height="155px"></canvas>
+              </div>
+              <!-- Card image -->
+
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center">
+
+                <div class="list-group list-panel">
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Cras justo odio <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus ac
+                    facilisi<i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Morbi leo risus <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Porta ac consectet<i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum at eros
+                    <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top" title="Click to fix"></i></a>
+
+                </div>
+              </div>
+              <!-- Card content -->
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </section>
+      <!-- Section: Cascading panels -->
       <!-- Section: Analytical panel -->
       <section class="mb-5">
 
@@ -222,23 +258,23 @@
 
                       <tbody>
                         <tr>
-                          <td><img src="../../img/flags/us.png" class="flag mr-2"> United States</td>
+                          <td><img src="" class="flag mr-2"> United States</td>
                           <td>307</td>
                         </tr>
                         <tr>
-                          <td><img src="../../img/flags/in.png" class="flag mr-2"> India</td>
+                          <td><img src="" class="flag mr-2"> India</td>
                           <td>504</td>
                         </tr>
                         <tr>
-                          <td><img src="../../img/flags/cn.png" class="flag mr-2"> China</td>
+                          <td><img src="" class="flag mr-2"> China</td>
                           <td>613</td>
                         </tr>
                         <tr>
-                          <td><img src="../../img/flags/pl.png" class="flag mr-2"> Poland</td>
+                          <td><img src="" class="flag mr-2"> Poland</td>
                           <td>208</td>
                         </tr>
                         <tr>
-                          <td><img src="../../img/flags/it.png" class="flag mr-2"> Italy</td>
+                          <td><img src="g" class="flag mr-2"> Italy</td>
                           <td>314</td>
                         </tr>
 
@@ -246,8 +282,7 @@
 
                     </table>
 
-                    <button
-                      class="btn btn-flat grey lighten-3 btn-rounded waves-effect float-right font-weight-bold dark-grey-text btn-dash">View
+                    <button class="btn btn-flat grey lighten-3 btn-rounded waves-effect float-right font-weight-bold dark-grey-text btn-dash">View
                       full report</button>
 
                   </div>
@@ -362,151 +397,7 @@
       </section>
       <!-- Section: Analytical panel -->
 
-      <!-- Section: Cascading panels -->
-      <section class="mb-5">
 
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-lg-4 col-md-12 mb-4">
-
-            <!-- Card -->
-            <div class="card card-cascade narrower">
-
-              <!-- Card image -->
-              <div class="view view-cascade gradient-card-header deep-blue-gradient">
-                <canvas id="seo" height="155px"></canvas>
-              </div>
-              <!-- Card image -->
-
-              <!-- Card content -->
-              <div class="card-body card-body-cascade text-center">
-
-                <div class="list-group list-panel">
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Cras justo odio <i
-                      class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus ac
-                    facilisi<i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Morbi leo risus <i
-                      class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Porta ac consectet<i
-                      class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum at eros
-                    <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-                </div>
-              </div>
-              <!-- Card content -->
-
-            </div>
-            <!-- Card -->
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-lg-4 col-md-12 mb-4">
-
-            <!-- Card -->
-            <div class="card card-cascade narrower">
-
-              <!-- Card image -->
-              <div class="view view-cascade gradient-card-header blue-gradient">
-                <canvas id="traffic" height="155px"></canvas>
-              </div>
-              <!-- Card image -->
-
-              <!-- Card content -->
-              <div class="card-body card-body-cascade text-center">
-
-                <div class="list-group list-panel">
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Cras justo odio <i
-                      class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus ac
-                    facilisi<i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Morbi leo risus <i
-                      class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Porta ac consectet<i
-                      class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum at eros
-                    <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-                </div>
-              </div>
-              <!-- Card content -->
-
-            </div>
-            <!-- Card -->
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-lg-4 col-md-12 mb-4">
-
-            <!-- Card -->
-            <div class="card card-cascade narrower">
-
-              <!-- Card image -->
-              <div class="view view-cascade gradient-card-header purple-gradient">
-                <canvas id="conversion" height="155px"></canvas>
-              </div>
-              <!-- Card image -->
-
-              <!-- Card content -->
-              <div class="card-body card-body-cascade text-center">
-
-                <div class="list-group list-panel">
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Cras justo odio <i
-                      class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Dapibus ac
-                    facilisi<i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Morbi leo risus <i
-                      class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Porta ac consectet<i
-                      class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-                  <a href="#" class="list-group-item d-flex justify-content-between dark-grey-text">Vestibulum at eros
-                    <i class="fas fa-wrench ml-auto" data-toggle="tooltip" data-placement="top"
-                      title="Click to fix"></i></a>
-
-                </div>
-              </div>
-              <!-- Card content -->
-
-            </div>
-            <!-- Card -->
-
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-      </section>
-      <!-- Section: Cascading panels -->
 
     </div>
   </main>
@@ -528,8 +419,7 @@
 
   <!-- JQuery -->
   <script src="ass/js/jquery-3.4.1.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="ass/js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
@@ -537,18 +427,17 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="ass/js/mdb.min.js"></script>
   <script src="ass/js/cook.js"></script>
-        <script src="ass/js/vue.min.js"></script>
-        <script src="ass/js/slider.js"></script>
-	 <script src="ass/js/tpl_navbar.js"></script>
-	  <script src="ass/js/link.js"></script>
+  <script src="ass/js/vue.min.js"></script>
+  <script src="ass/js/slider.js"></script>
+  <script src="ass/js/tpl_navbar.js"></script>
+  <script src="ass/js/link.js"></script>
+  <script src="ass/js/sep.js"></script>
 
   <script>
-
-
     /*Global settings*/
     Chart.defaults.global.defaultFontColor = '#fff';
 
-    $(function () {
+    $(function() {
       let data = {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
@@ -690,7 +579,7 @@
         }
       });
 
-      $('#dark-mode').on('click', function (e) {
+      $('#dark-mode').on('click', function(e) {
 
         e.preventDefault();
 
@@ -705,7 +594,7 @@
           '#slide-out i, #slide-out a, .dropdown-item i, .dropdown-item').toggleClass('text-white');
         $('.btn-dash').toggleClass('grey blue').toggleClass('lighten-3 darken-3');
         $('.gradient-card-header').toggleClass('white black lighten-4');
-		$('.parallax4').toggleClass('white-skin navy-blue-skin');
+        $('.parallax4').toggleClass('white-skin navy-blue-skin');
 
         for (let i = 0; i <= 5; i++) {
           myRadarChart.data.datasets[0].data[i] = (Math.random(i) * 100);
@@ -727,13 +616,12 @@
 
 
     });
-
   </script>
   <script>
-    $(function () {
+    $(function() {
       $('.min-chart#chart-sales').easyPieChart({
         barColor: "#4caf50",
-        onStep: function (from, to, percent) {
+        onStep: function(from, to, percent) {
           $(this.el).find('.percent').text(Math.round(percent));
         }
       });
@@ -744,7 +632,7 @@
 
 
     // Material Select Initialization
-    $(document).ready(function () {
+    $(document).ready(function() {
       $('.mdb-select').material_select();
     });
 
@@ -752,10 +640,9 @@
     $(".button-collapse").sideNav();
 
     // Tooltips Initialization
-    $(function () {
+    $(function() {
       $('[data-toggle="tooltip"]').tooltip()
     })
-
   </script>
 
   <!-- /.JVectorMap -->
