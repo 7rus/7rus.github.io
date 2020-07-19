@@ -19,3 +19,10 @@ $(document).ready(function() {
    	 $('a.navwork').addClass("active");
    }, 0);
 });
+$(document).ready(function() {
+   $('#slider-container').load('https://7rus.github.io/ass/tpl/slider.html');
+   setTimeout(function(){
+   	 $('a.navresume').addClass("active");
+   	 $('a.navwork').addClass("active");
+   }, 0);
+});
