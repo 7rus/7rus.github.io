@@ -35,7 +35,7 @@ body ::-moz-selection {
 	/*min-height: 36rem;*/
 	min-height: 20rem;
 	position: relative;
-	padding-top: 45px;
+	padding-top: 38px;
 }
 @media (min-width: 1000px) {
   .wrapper {
@@ -66,7 +66,7 @@ body ::-moz-selection {
 }
 .slide-wrapper:nth-child(1) .slide-content-text {
   text-shadow: 2px 5px 45px rgba(85, 96, 113, 0.25);
-      line-height: 40px;
+      /*line-height: 40px;*/
 }
 .slide-wrapper:nth-child(2) {
  /* background-color: rgba(144, 171, 184, 0.7);*/
@@ -558,7 +558,7 @@ body ::-moz-selection {
 .slide-wrapper.active {
   transition-delay: 0s;
   opacity: 1;
-  height: 98%;
+  height: 97%;
 }
 .slide-wrapper.active .slide-content-text > p {
 	text-shadow: 3px 3px 4px #fcecbc;
