@@ -2,13 +2,15 @@
 var app = new Vue({
     el: '#app',
     data: {
+        cart_1: "Офисная мебель",
         currentSlide: 0,
         isPreviousSlide: false,
         isFirstLoad: true,
         slides: [
             {
-                headlineFirstLine: "Мебель",
-                headlineSecondLine: "под заказ",
+                headlineFirstLine: "Изготовление мебели",
+                headlineFirstLineBig: "Мебель",
+                headlineSecondLine: "на заказ",
                 sublineFirstLine: "Качественно",
                 sublineSecondLine: "Быстро",
                 bgImg: "ass/pic/slide-1.jpg",
@@ -16,7 +18,8 @@ var app = new Vue({
 				button: "Мебель для дома"
             },
             {
-                headlineFirstLine: "Мебель",
+                headlineFirstLine: "Практичная мебель",
+                headlineFirstLineBig: "Мебель",
                 headlineSecondLine: "для офиса",
                 sublineFirstLine: "Креативно",
                 sublineSecondLine: "Удобно",
@@ -25,10 +28,11 @@ var app = new Vue({
 				button: "Для офиса"
             },
             {
-                headlineFirstLine: "Мебель",
+                headlineFirstLine: "Долговечная мебель",
+                headlineFirstLineBig: "Мебель",
                 headlineSecondLine: "для террас",
-                sublineFirstLine: "Практичнось",
-                sublineSecondLine: "Долговечность",
+                sublineFirstLine: "Практично",
+                sublineSecondLine: "Долговечно",
                 bgImg: "ass/pic/slide-3.jpg",
                 rectImg: "ass/pic/slide-3.jpg",
 				button: "Для улицы"
