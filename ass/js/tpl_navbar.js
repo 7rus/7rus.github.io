@@ -26,3 +26,10 @@ $(document).ready(function() {
    	 $('a.navwork').addClass("active");
    }, 0);
 });
+$(document).ready(function() {
+   $('#canvas-container').load('https://7rus.github.io/ass/tpl/canvas.html');
+   setTimeout(function(){
+   	 $('a.navresume').addClass("active");
+   	 $('a.navwork').addClass("active");
+   }, 0);
+});

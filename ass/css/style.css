@@ -1,4 +1,17 @@
 /* Your custom styles */
+.card.card-cascade .view.view-cascade, .md-pills .nav-link.active:hover {
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 6px 25px 0 rgba(0,10,10,.66);
+    z-index: 1000;
+}
+.card.card-cascade .view.view-cascade, .card.card-image [class*=rgba-] {
+    border-radius: 1.25rem;
+}
+.card.card-cascade.narrower .view.view-cascade {
+    margin-top: -1.25rem;
+    margin-right: 6%;
+    margin-left: 6%;
+}
+/* Your custom styles */
 .fixed-sn .double-nav, .fixed-sn footer, .fixed-sn main {
      padding-left: 0;
 }
