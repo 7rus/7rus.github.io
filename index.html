@@ -21,8 +21,6 @@
 </head>
 
 <body class="fixed-sn white-skin">
-//Hf
-
 
   <!-- Main Navigation -->
   <header>
@@ -536,148 +534,7 @@
     Chart.defaults.global.defaultFontColor = '#fff';
 
     $(function() {
-      let data = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [{
-          label: "My First dataset",
-          fillColor: "rgba(220,220,220,0.2)",
-          strokeColor: "rgba(220,220,220,1)",
-          pointColor: "rgba(220,220,220,1)",
-          pointStrokeColor: "#fff",
-          pointHighlightFill: "#fff",
-          pointHighlightStroke: "rgba(0,0,0,.15)",
-          data: [65, 59, 80, 81, 56, 55, 40],
-          backgroundColor: "#4CAF50"
-        }, {
-          label: "My Second dataset",
-          fillColor: "rgba(255,255,255,.25)",
-          strokeColor: "rgba(255,255,255,.75)",
-          pointColor: "#fff",
-          pointStrokeColor: "#fff",
-          pointHighlightFill: "#fff",
-          pointHighlightStroke: "rgba(0,0,0,.15)",
-          data: [28, 48, 40, 19, 86, 27, 90]
-        }]
-      };
-
-      let dataPie = [{
-        value: 300,
-        color: "#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red"
-      }, {
-        value: 50,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
-      }, {
-        value: 100,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Yellow"
-      }]
-
-      let option = {
-        responsive: true,
-        // set font color
-        scaleFontColor: "#fff",
-        // font family
-        defaultFontFamily: "'Roboto', sans-serif",
-        // background grid lines color
-        scaleGridLineColor: "rgba(255,255,255,.1)",
-        // hide vertical lines
-        scaleShowVerticalLines: false,
-      };
-
-      //radar
-      let ctxR = document.getElementById("conversion").getContext('2d');
-      let myRadarChart = new Chart(ctxR, {
-        type: 'radar',
-        data: {
-          labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling"],
-          datasets: [{
-              label: "My First dataset",
-              data: [65, 59, 90, 81, 56, 55],
-            },
-            {
-              label: "My Second dataset",
-              data: [28, 48, 40, 19, 96, 27],
-
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          legend: {
-            display: false
-          },
-
-          scale: {
-            ticks: {
-              display: false
-            },
-          }
-        }
-      });
-
-      //bar
-      let ctx = document.getElementById("traffic").getContext('2d');
-      let myBarChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ["January", "Febuary", "March", "April", "May", "June"],
-          datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-              'rgba(255, 255, 255, 0.3)',
-              'rgba(255, 255, 255, 0.3)',
-              'rgba(255, 255, 255, 0.3)',
-              'rgba(255, 255, 255, 0.3)',
-              'rgba(255, 255, 255, 0.3)',
-              'rgba(255, 255, 255, 0.3)'
-            ],
-            borderColor: [
-              'rgba(255, 255, 255, 1)',
-              'rgba(255, 255, 255, 1)',
-              'rgba(255, 255, 255, 1)',
-              'rgba(255, 255, 255, 1)',
-              'rgba(255, 255, 255, 1)',
-              'rgba(255, 255, 255, 1)'
-            ],
-            borderWidth: 1,
-            color: 'rgba(255, 255, 255, 1)'
-          }]
-        },
-        optionss: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true
-              }
-            }]
-          }
-        }
-      });
-
-      //pie
-      let ctxP = document.getElementById("seo").getContext('2d');
-      let myPieChart = new Chart(ctxP, {
-        type: 'pie',
-        data: {
-          labels: ["March", "April", "May", "June"],
-          datasets: [{
-            data: [160, 50, 100, 40],
-            backgroundColor: ["#4285F4", "#ffbb33", "#45cafc", "#FF5252"],
-            hoverBackgroundColor: ["#6ea0f2", "#fec451", "#78daff", "#fa6e6e"]
-          }]
-        },
-        options: {
-          responsive: true
-        }
-      });
-
-
+   
       $('#dark-mode').on('click', function(e) {
 
         e.preventDefault();
@@ -695,59 +552,15 @@
       //  $('.gradient-card-header').toggleClass('white black lighten-4');
         $('.parallax4').toggleClass('white-skin navy-blue-skin');
 
-      /* for (let i = 0; i <= 5; i++) {
-          myRadarChart.data.datasets[0].data[i] = (Math.random(i) * 100);
-          myRadarChart.data.datasets[1].data[i] = (Math.random(i) * 100);
-        }
-
-        for (let i = 0; i <= 6; i++) {
-          myBarChart.data.datasets[0].data[i] = (Math.random(i) * 100);
-        }
-
-        for (let i = 0; i <= 4; i++) {
-          myPieChart.data.datasets[0].data[i] = (Math.random(i) * 100);
-        }
-
-      /*  myPieChart.update();
-        myBarChart.update();
-        myRadarChart.update();*/
+      
       });
 
 
     });
   </script>
-  <script>
-    //$(function() {
-      //$('.min-chart#chart-sales').easyPieChart({
-        //barColor: "#4caf50",
-        //onStep: function(from, to, percent) {
-          //$(this.el).find('.percent').text(Math.round(percent));
-        //}
-      //});
-  //});
-
-    // Data Picker Initialization
-    $('.datepicker').pickadate();
-
-
-    // Material Select Initialization
-    //$(document).ready(function() {
-      //$('.mdb-select').material_select();
-    //});
-
-    // Sidenav Initialization
-    //$(".button-collapse").sideNav();
-
-    // Tooltips Initialization
-    $(function() {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
+ 
 
   <!-- /.JVectorMap -->
 </body>
-<div id="canvas-container"></div>
-<canvas id="seo" height="1px" z-index="0"></canvas>
-<canvas id="traffic" height="3px" display=""></canvas>
-<canvas id="conversion" height="1px"></canvas>
+
 </html>
