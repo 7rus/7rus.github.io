@@ -30,7 +30,67 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg scrolling-navbar navbar-light fixed-top">
 
-  <div id="nav-container"></div>
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-dn mr-auto">
+          <p>7rus</p>
+        </div>
+
+
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRightAlignExample" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarRightAlignExample">
+          <!-- Left links -->
+          <ul class="navbar-nav ml-auto mb-2 mb-lg-0 md-pills pills-secondary mb-2 ">
+            <li class="nav-item example hoverable">
+              <a class="nav-link active waves-effect" aria-current="page" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="#">Портфолио</a>
+            </li>
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                Услуги
+              </a>
+              <!-- Dropdown menu -->
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item waves-effect" href="#">Action</a></li>
+                <li><a class="dropdown-item waves-effect" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item waves-effect" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link waves-effect" href="#">Контакты</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <div class="d-flex change-mode">
+
+          <div class="change-mode-wrapper">
+            <button class="" id="dark-mode" )>
+              <i class="fas fa-adjust"></i>
+
+            </button>
+          </div>
+        </div> <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+
+      </div>
 
     </nav> <!-- Navbar -->
 
@@ -634,7 +694,7 @@
         $('.list-panel a').toggleClass('navy-blue-bg-a text-white').toggleClass('list-group-border');
         $('.list-panel a').toggleClass('dark-grey-text');
         $('footer, .card').toggleClass('dark-card-admin');
-        $('body, .navbar').toggleClass('white-skin navy-blue-skin');
+        $('body, .navbar, .navbar-nav').toggleClass('white-skin navy-blue-skin');
         $(this).toggleClass('white text-dark btn-outline-black');
         $('body').toggleClass('dark-bg-admin');
         $('h6, .card, td, th, i, li a, input, label').not(
@@ -643,7 +703,7 @@
       //  $('.gradient-card-header').toggleClass('white black lighten-4');
         $('.parallax4').toggleClass('white-skin navy-blue-skin');
 
-        for (let i = 0; i <= 5; i++) {
+      /* for (let i = 0; i <= 5; i++) {
           myRadarChart.data.datasets[0].data[i] = (Math.random(i) * 100);
           myRadarChart.data.datasets[1].data[i] = (Math.random(i) * 100);
         }
@@ -656,9 +716,9 @@
           myPieChart.data.datasets[0].data[i] = (Math.random(i) * 100);
         }
 
-        myPieChart.update();
+      /*  myPieChart.update();
         myBarChart.update();
-        myRadarChart.update();
+        myRadarChart.update();*/
       });
 
 

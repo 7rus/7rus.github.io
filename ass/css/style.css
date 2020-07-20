@@ -1,4 +1,9 @@
 /* Your custom styles */
+.noch: {
+  position: fixed;
+  top: 30%;
+  z-index: 9999;
+}
 .card.card-cascade .view.view-cascade, .md-pills .nav-link.active:hover {
     box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 6px 25px 0 rgba(0,10,10,.66);
     z-index: 1000;
@@ -10,6 +15,7 @@
     margin-top: -1.25rem;
     margin-right: 6%;
     margin-left: 6%;
+        top: -15px;
 }
 /* Your custom styles */
 .fixed-sn .double-nav, .fixed-sn footer, .fixed-sn main {
@@ -34,8 +40,8 @@
     padding: 0!important;
 }}
 .navbar-nav {
-	margin-right:25px;
-	padding-left:25px!important;
+	/*margin-right:25px;
+	padding-left:25px!important;*/
 }
 .editorial {
   display: block;
